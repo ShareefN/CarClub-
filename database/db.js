@@ -3,7 +3,6 @@ const Sequelize = require("sequelize");
 const sequelize = new Sequelize('ClubCar', 'root', '12345678', {
     host: "localhost",
     dialect: "mysql",
-    port: 3306,
     define: {
         paranoid: true
     }

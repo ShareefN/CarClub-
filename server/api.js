@@ -1,6 +1,7 @@
-
 const router = require('express').Router();
 const ctrl = require('./controllers');
+
+// Get and Post api's
 
 router.route('/addMerc').post((req, res) => {
     ctrl.addMerc(req, res)
