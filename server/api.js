@@ -59,4 +59,12 @@ router.route('/getPorsche').get((req, res) => {
   ctrl.getPorsche(req, res)
 })
 
+router.route('/sendRequest').post((req, res) => {
+  ctrl.sendRequest(req, res)
+})
+
+router.route('/receiveRequests').get((req, res) => {
+  ctrl.receiveRequests(req, res)
+})
+
 module.exports.router = router;

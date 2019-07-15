@@ -1,4 +1,4 @@
-const { Mercedes, Bmw, Porsche, Lambo, Ferrari, Audi, Range} = require('../database/db');
+const { Mercedes, Bmw, Porsche, Lambo, Ferrari, Audi, Range, Request} = require('../database/db');
 
 // Adding and getting car datas from and to database
 
@@ -43,7 +43,7 @@ exports.addAudi = function(req, res){
 }
 
 exports.getAudi = function(req, res){
-	Audi.find().then(data => {
+	Audi.findAll().then(data => {
 		return res.send(data)
 	}).catch(err => {
 		console.log(err)
@@ -59,7 +59,7 @@ exports.addFerrari = function(req, res){
 }
 
 exports.getFerrari = function(req, res){
-	Ferrari.find().then(data => {
+	Ferrari.findAll().then(data => {
 		return res.send(data)
 	}).catch(err => {
 		console.log(err)
@@ -75,7 +75,7 @@ exports.addRange = function(req, res){
 }
 
 exports.getRange = function(req, res){
-	Range.find().then(data => {
+	Range.findAll().then(data => {
 		return res.send(data)
 	}).catch(err => {
 		console.log(err)
@@ -91,7 +91,7 @@ exports.addLambo = function(req, res){
 }
 
 exports.getLambo = function(req, res){
-	Lambo.find().then(data => {
+	Lambo.findAll().then(data => {
 		return res.send(data)
 	}).catch(err => {
 		console.log(err)
@@ -107,7 +107,23 @@ exports.addPorsche = function(req, res){
 }
 
 exports.getPorsche = function(req, res){
-	Porsche.find().then(data => {
+	Porsche.findAll().then(data => {
+		return res.send(data)
+	}).catch(err => {
+		console.log(err)
+	})
+}
+
+exports.sendRequest = function(req, res){
+	Request.create(req.body).then(data => {
+		return res.send(data)
+	}).catch(err => {
+		console.log(err)
+	})
+}
+
+exports.receiveRequests = function(req, res){
+	Request.findAll().then(data => {
 		return res.send(data)
 	}).catch(err => {
 		console.log(err)

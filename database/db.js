@@ -16,7 +16,7 @@ sequelize.authenticate()
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     name: { type: Sequelize.STRING, require: true },
     image: { type: Sequelize.STRING, require: true },
-    year: { type: Sequelize.INTEGER, require: true },
+    year: { type: Sequelize.INTEGER , require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
     milage: { type: Sequelize.INTEGER, require: true }
@@ -82,6 +82,12 @@ sequelize.authenticate()
     milage: { type: Sequelize.INTEGER, require: true }
  })
 
+ const Request = sequelize.define('requests', {
+    name: { type: Sequelize.STRING },
+    mobile: { type: Sequelize.STRING },
+    date: { type: Sequelize.STRING },
+ })
+
  sequelize.sync();
 
  module.exports.Mercedes = Mercedes;
@@ -91,6 +97,7 @@ sequelize.authenticate()
  module.exports.Range = Range;
  module.exports.Ferrari = Ferrari;
  module.exports.Porsche = Porsche;
+ module.exports.Request = Request;
 
 
 
