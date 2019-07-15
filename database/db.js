@@ -1,13 +1,10 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize('ClubCar', 'root', '12345678', {
-    host: "localhost",
-    dialect: "mysql",
-    define: {
-        paranoid: true
-    }
+const sequelize = new Sequelize('carclub', 'root', '1111', {
+   host: "localhost",
+   dialect: "mysql",
+   logging: false
 });
-
 
 sequelize.authenticate()
  .then(() => console.log('Database Connected!'))
@@ -19,9 +16,10 @@ sequelize.authenticate()
     id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
     name: { type: Sequelize.STRING, require: true },
     image: { type: Sequelize.STRING, require: true },
-    year: { type: Sequelize.DATE, require: true },
+    year: { type: Sequelize.INTEGER, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
  const Bmw = sequelize.define('bmw', {
@@ -31,6 +29,7 @@ sequelize.authenticate()
     year: { type: Sequelize.DATE, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
  const Audi = sequelize.define('audi', {
@@ -40,6 +39,7 @@ sequelize.authenticate()
     year: { type: Sequelize.DATE, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
  const Lambo = sequelize.define('lambo', {
@@ -49,6 +49,7 @@ sequelize.authenticate()
     year: { type: Sequelize.DATE, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
   const Range = sequelize.define('range', {
@@ -58,6 +59,7 @@ sequelize.authenticate()
     year: { type: Sequelize.DATE, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
  const Ferrari = sequelize.define('ferrari', {
@@ -67,6 +69,7 @@ sequelize.authenticate()
     year: { type: Sequelize.DATE, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
  const Porsche  = sequelize.define('porsche', {
@@ -76,6 +79,7 @@ sequelize.authenticate()
     year: { type: Sequelize.DATE, require: true },
     color: { type: Sequelize.STRING, require: true },
     price: { type: Sequelize.INTEGER, require: true },
+    milage: { type: Sequelize.INTEGER, require: true }
  })
 
  sequelize.sync();

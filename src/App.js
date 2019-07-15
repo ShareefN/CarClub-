@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import Navbar from './components/topnavbar';
-import Home from './components/home'
+import Home from './components/home';
+import Mercedes from './components/mercedes';
 
 class App extends Component{
   constructor(props){
@@ -22,7 +24,10 @@ class App extends Component{
       <Fragment>
         <Navbar onLogin={this.onLogin}/>
       </Fragment>
-        <Home/>
+      <Router>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/mercedes" component={Mercedes}/>
+      </Router>
       </div>
     )
   }

@@ -35,7 +35,7 @@ exports.getBmw = function(req, res){
 }
 
 exports.addAudi = function(req, res){
-	Audi.create(rea.body).then(item => {
+	Audi.create(req.body).then(item => {
 		return res.send(item)
 	}).catch(err => {
 		console.log(err)

@@ -2,10 +2,11 @@
   "name": "carclub",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:5050",
+  "proxy": "http://127.0.0.1:4050",
   "dependencies": {
     "@material-ui/core": "^4.2.0",
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
     "concurrently": "^4.1.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",

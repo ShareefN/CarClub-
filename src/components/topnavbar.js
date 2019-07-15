@@ -27,7 +27,7 @@ class NavBar extends Component{
 					<ToolBar>
 					<Typography style={{color: "white", textDecoration:"none", display: 'inline-block', paddingTop: '.3125rem', paddingBottom: '.3125rem', marginRight: '1rem', fontSize: '1.25rem', lineHeight: 'inherit', whiteSpace: 'nowrap'}}>
         	<Link href="/" style={{color: 'black', textDecoration: 'none'}}>CarClub!</Link>
-					<Button color="black" style={{marginLeft: "75%", position: 'absolute'}}>Sign In As Admin</Button>
+					<Button color="black" style={{marginLeft: "75%", position: 'absolute'}}>LogIn As Admin</Button>
       		</Typography>
 					</ToolBar>
 					<Paper className={this.classes.root}>

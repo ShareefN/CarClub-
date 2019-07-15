@@ -4,7 +4,7 @@ const bodyparser = require('body-parser');
 const users = require('./api');
 const path = require("path")
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 4050;
 const app = express().use('*', cors());
 
 app.use('/static', express.static(path.join(__dirname, '../build//static')));
@@ -17,19 +17,9 @@ app.use(function(req, res, next) {
 	 next();
   });
  
-const authMiddleware = (req, res, next) => {
- if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] === 'JWT') {
-     console.log(req.headers.authorization.split(' ')[0]);
-      next();
-    } else {
-      console.log('else');
-      next();
-    }
-};
-
-app.use('/', authMiddleware, (req, res, next) => {
- userRoutes(app);
- next()
+app.use('/', users.router)
+app.get("/*", (req, res) => {
+	res.sendFile('index.html', {root: path.join(__dirname, '../build/')});
 })
 
 app.listen(port, () => {

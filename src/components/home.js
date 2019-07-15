@@ -2,6 +2,23 @@ import React, { Component } from 'react';
 import {Map, Marker, GoogleApiWrapper, InfoWindow} from 'google-maps-react';
 
 class Home extends Component{
+	constructor(props){
+		super(props)
+		this.state = {
+			name: '',
+			mobile: '',
+			date: '',
+			message: ''
+		}
+		this.onChange = this.onChange.bind(this);
+	}
+
+	onChange(event){
+		this.setState({
+		[event.target.name]: [event.target.value]
+		})
+	}
+
   render(){
     return(
 			<div>
@@ -22,15 +39,7 @@ class Home extends Component{
        <Marker onClick={this.onMarkerClick}
         name={'Current location'} />
       </Map>
-			<div>
-				<h1 style={{marginTop: '15%', textAlign: 'center'}}>Say hello to us</h1>
-				<div>
-				<input type="text" placeholder="Name" name="name" />
-				<input type="mobile" placeholder="Mobile Number" name="mobile" />
-				<textarea placeholder="Your message"></textarea>
-				</div>
-			</div>
-			</div>
+			</div>	
     )
   }
 }
