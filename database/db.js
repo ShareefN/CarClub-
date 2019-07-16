@@ -88,6 +88,13 @@ sequelize.authenticate()
     date: { type: Sequelize.STRING },
  })
 
+// Admin User
+
+ const Admin = sequelize.define('admin', {
+    email: { type: Sequelize.STRING },
+    password: { type: Sequelize.STRING }
+ })
+
  sequelize.sync();
 
  module.exports.Mercedes = Mercedes;
@@ -98,6 +105,7 @@ sequelize.authenticate()
  module.exports.Ferrari = Ferrari;
  module.exports.Porsche = Porsche;
  module.exports.Request = Request;
+ module.exports.Admin = Admin;
 
 
 

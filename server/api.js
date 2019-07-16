@@ -67,4 +67,12 @@ router.route('/receiveRequests').get((req, res) => {
   ctrl.receiveRequests(req, res)
 })
 
+router.route('/addAdmin').post((req, res) => {
+  ctrl.addAdmin(req, res)
+})
+
+router.route('/getAdmin').get((req, res) => {
+  ctrl.getAdmin(req, res)
+})
+
 module.exports.router = router;

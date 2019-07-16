@@ -4,7 +4,7 @@ const bodyparser = require('body-parser');
 const users = require('./api');
 const path = require("path")
 
-const port = process.env.PORT || 4050;
+const port = process.env.PORT || 3070;
 const app = express().use('*', cors());
 
 app.use('/static', express.static(path.join(__dirname, '../build//static')));
