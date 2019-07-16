@@ -79,7 +79,7 @@ class NavBar extends Component{
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-					<Button color="primary" onClick={this.checkAdmin.bind(this)}>Login</Button>
+					<Button href="/requests" color="primary" onClick={this.checkAdmin.bind(this)}>Login</Button>
 					<Button color="primary" onClick={this.hanleClickClose.bind(this)}>Back</Button>
         </DialogActions>
       </Dialog>

@@ -9,6 +9,7 @@ import Porsche from './components/porsche';
 import Range from './components/range';
 import Ferrari from './components/ferrari';
 import Lamborghini from './components/lambo';
+import Requests from './components/booking';
 
 class App extends Component{
   constructor(props){
@@ -39,6 +40,7 @@ class App extends Component{
         <Route exact path="/range" component={Range}/>
         <Route exact path="/ferrari" component={Ferrari}/>
         <Route exact path="/lambo" component={Lamborghini}/>
+        <Route exact path="/requests" component={Requests}/>        
       </Router>
       </div>
     )

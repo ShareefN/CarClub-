@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Map, Marker, GoogleApiWrapper, InfoWindow} from 'google-maps-react';
+import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 class Home extends Component{
 	constructor(props){
@@ -35,8 +35,9 @@ class Home extends Component{
 					<div style={{textAlign:'center', marginLeft: '700px', position: 'relative'}}>
 					<strong><p style={{color: '#737680'}}>There is a need in Amman for a large selection of quality used cars, and Integrity<br/> Auto Sales will sell these top-quality used vehicles at a competitive price. <br/>The owner and sales manager have over 30 years of combined experience in new and used auto sales.<br/> We will continue to develop our excellent working relationship with local<br/> dealers and auctions to bring the savings to the customer.<br/>Whatever you like CarClub has it, Come checkout our inventory and maybe go for a test drive!</p></strong>
 					</div>
-					<Map google={this.props.google} zoom={14} style={{height: '40%', width: '45%', marginLeft: '2%', marginTop: '-240px'}}>
-       <Marker onClick={this.onMarkerClick}
+					<Map google={this.props.google} initialCenter={{ lat: 31.9414, lng: 35.8881}} zoom={18} style={{height: '40%', width: '45%', marginLeft: '2%', marginTop: '-240px'}}>
+			 <Marker onClick={this.onMarkerClick}
+			 
         name={'Current location'} />
       </Map>
 			</div>	
