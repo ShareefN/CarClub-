@@ -9,6 +9,7 @@ This application was made using Create-react-app for FrontEnd, NodeJs and MySQL 
 ## Prerequisites
 
 npm install 
+Run the application by: npm run react-start
 
 ## Requirements
 
